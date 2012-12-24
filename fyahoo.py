@@ -120,7 +120,7 @@ class YahooFinance(object):
         try:
             data_link = self._get_data_link(page)
         except AttributeError:
-            raise Exception('Price data for {} not found!'.format(ticker))
+            raise Exception('Check that {} is a valid ticker!'.format(ticker))
             
         hist_data = urllib2.urlopen(data_link).read().split('\n')
         for row in csv.DictReader(hist_data):
