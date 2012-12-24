@@ -34,9 +34,6 @@ import sys
 import settings
 
 
-_UPDATE_RETRY_S = 3600
-
-
 class YahooFinance(object):
 
     def __init__(self):
